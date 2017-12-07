@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>An advanced progress bar</title>
+    <style>
+        .myProgressContainer {
+            padding: 2px;
+        }
+        .myProgress {
+            width: 100%;
+            background-color: #eee;
+            padding: 0px;
+        }
+        .myProgress-head {
+            border-radius: 10px 0px 0px 10px;
+        }
+        .myProgress-tail {
+            border-radius: 0px 10px 10px 0px;
+        }
+        .myBar{
+            height: 20px;
+            background-color: lightskyblue;
+            border-radius: 10px 0px 0px 10px;
+        }
+        #myBar1 {
+            width: 50%;
+        }
+        #myBar2 {
+            width: 0%;
+        }
+        #myBar3 {
+            width: 0%;
+        }
+        #myBar4 {
+            width: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <h1>An advanced progress bar</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+           <div class="col-sm-3 myProgressContainer">
+               <div class="myProgress myProgress-head col-sm-3">
+                   <div id="myBar1" class="myBar"></div>
+               </div>
+           </div>
+            <div class="col-sm-3 myProgressContainer">
+                <div class="myProgress">
+                    <div id="myBar2" class="myBar"></div>
+                </div>
+            </div>
+            <div class="col-sm-3 myProgressContainer">
+                <div class="myProgress">
+                    <div id="myBar3" class="myBar"></div>
+                </div>
+            </div>
+            <div class="col-sm-3 myProgressContainer">
+                <div class="myProgress myProgress-tail">
+                    <div id="myBar4" class="myBar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
