@@ -7,6 +7,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>An advanced progress bar</title>
     <style>
+        .myProgressTitle{
+            text-align: center;
+            font-weight: 500;
+            color: orange;
+        }
+        .myGapTitle{
+            font-weight: 500;
+            color: dimgrey;
+        }
+        .myGap-top-row-title-head {
+            text-align: left;
+        }
+        .myGap-top-row-title-tail {
+            text-align: right;
+        }
+        .myGap-non-top-row-title {
+            text-align: center;
+        }
         .myProgressContainer {
             padding: 2px;
         }
@@ -24,19 +42,32 @@
         .myBar{
             height: 20px;
             background-color: lightskyblue;
+        }
+        .myBar-head{
             border-radius: 10px 0px 0px 10px;
         }
+        .myBar-tail{
+            border-radius: 0px 10px 10px 0px;
+        }
         #myBar1 {
-            width: 50%;
+            width: 100%;
         }
         #myBar2 {
-            width: 0%;
+            width: 50%;
         }
         #myBar3 {
             width: 0%;
         }
         #myBar4 {
             width: 0%;
+        }
+        .gap-row-2-fix{
+            position: relative;
+            top: -20px;
+        }
+        .gap-row-3-fix {
+            position: relative;
+            top: -40px;
         }
     </style>
 </head>
@@ -45,10 +76,26 @@
         <h1>An advanced progress bar</h1>
     </div>
     <div class="container">
+        <!-- title -->
+        <div class="row">
+            <div class="col-sm-3 myProgressTitle">
+                USD 2.17 / KG
+            </div>
+            <div class="col-sm-3 myProgressTitle">
+                USD 2.15 / KG
+            </div>
+            <div class="col-sm-3 myProgressTitle">
+                USD 2.13 / KG
+            </div>
+            <div class="col-sm-3 myProgressTitle">
+                USD 2.11 / KG
+            </div>
+        </div>
+        <!-- progress -->
         <div class="row">
            <div class="col-sm-3 myProgressContainer">
                <div class="myProgress myProgress-head col-sm-3">
-                   <div id="myBar1" class="myBar"></div>
+                   <div id="myBar1" class="myBar myBar-head"></div>
                </div>
            </div>
             <div class="col-sm-3 myProgressContainer">
@@ -63,8 +110,32 @@
             </div>
             <div class="col-sm-3 myProgressContainer">
                 <div class="myProgress myProgress-tail">
-                    <div id="myBar4" class="myBar"></div>
+                    <div id="myBar4" class="myBar myBar-tail"></div>
                 </div>
+            </div>
+        </div>
+        <!-- gap 1 -->
+        <div class="row">
+            <div class="col-sm-6 myGapTitle myGap-top-row-title-head">
+                0MT
+            </div>
+            <div class="col-sm-6 myGapTitle myGap-top-row-title-tail">
+                2500MT
+            </div>
+        </div>
+        <!-- gap 2 -->
+        <div class="row gap-row-2-fix">
+            <div class="col-sm-6 myGapTitle myGap-non-top-row-title">
+                500MT
+            </div>
+            <div class="col-sm-6 myGapTitle myGap-non-top-row-title">
+                2000MT
+            </div>
+        </div>
+        <!-- gap 3 -->
+        <div class="row gap-row-3-fix">
+            <div class="col-sm-12 myGapTitle myGap-non-top-row-title">
+                1000MT
             </div>
         </div>
     </div>
