@@ -100,7 +100,13 @@
            </div>
             <div class="col-sm-3 myProgressContainer">
                 <div class="myProgress">
-                    <div id="myBar2" class="myBar"></div>
+                    <div id="myBar2"
+                         class="myBar"
+                         data-toggle="popover"
+                         data-trigger="hover"
+                         data-placement="bottom"
+                         data-content="Current Price: USD 2.15 / KG"
+                    ></div>
                 </div>
             </div>
             <div class="col-sm-3 myProgressContainer">
@@ -139,5 +145,10 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
 </body>
 </html>
